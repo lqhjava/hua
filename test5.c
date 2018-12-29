@@ -3,19 +3,15 @@
 #include <stdlib.h>
 int Strlen1(char * arr)
 {
-	int count = 0;
-	while (*arr++ != '\0')
+	if (*arr == '\0')
 	{
-
-		count++;
+		return 0;
 	}
-
-	return count;
-
+	else return 1 + Strlen1(arr + 1);
 }
 int main()
 {
-	 char*arr = { "adasdasdas" };
+	char*arr = { "adasdasdas" };
 	int ret = Strlen1(arr);
 	printf("%d\n", ret);
 	system("pause");
